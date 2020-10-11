@@ -35,11 +35,11 @@ class HostControlPanel extends Component {
         var items = []
         for(const [index, user] of users.entries()){
             if(user.state === "waiting"){
-                items.push(<List.Item onClick={} key={index}>{user.username}</List.Item>)  
+                items.push(<List.Item key={index}>{user.username}</List.Item>)  
             } else if (user.state === "request"){
-                items.push(<List.Item onClick={} key={index}>{user.username}<Icon style={{float: "right"}} name="hand paper outline"/></List.Item>)
+                items.push(<List.Item key={index}>{user.username}<Icon style={{float: "right"}} name="hand paper outline"/></List.Item>)
             } else if (user.state === "claimed"){
-                items.push(<List.Item onClick={} key={index}>{user.username}<Icon style={{float: "right"}} name="pencil alternate"/></List.Item>)
+                items.push(<List.Item key={index}>{user.username}<Icon style={{float: "right"}} name="pencil alternate"/></List.Item>)
             }
         }
         return (
