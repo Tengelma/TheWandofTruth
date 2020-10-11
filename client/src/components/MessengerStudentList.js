@@ -29,13 +29,12 @@ class MessengerStudentList extends Component {
         console.log(users)
         var items = []
         for(const [index, user] of users.entries()){
-            const state = user.state
             if(user.state === "waiting"){
                 items.push(<List.Item key={index}>{user.username}</List.Item>)  
             } else if (user.state === "request"){
-                items.push(<List.Item key={index}>{user.username}<Icon name="hand paper outline"/></List.Item>)
+                items.push(<List.Item key={index}>{user.username}<Icon style={{float: "right"}} name="hand paper outline"/></List.Item>)
             } else if (user.state === "claimed"){
-                items.push(<List.Item key={index}>{user.username}<Icon name="pencil alternate"/></List.Item>)
+                items.push(<List.Item key={index}>{user.username}<Icon style={{float: "right"}} name="pencil alternate"/></List.Item>)
             }
         }
         return (
